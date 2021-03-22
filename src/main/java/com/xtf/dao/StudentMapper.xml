@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.xtf.dao.StudentMapper">
+    <!-- 修改操作 -->
+    <update id="update" parameterType="com.xtf.domain.Student">
+        update student set name = #{name}, age = #{age} where id = #{id}
+    </update>
+
+    <!-- 删除操作 -->
+    <delete id="delete" parameterType="Integer">
+        delete from student where id = #{id}
+    </delete>
+
+    <!-- 增加操作 -->
+    <insert id="insert" parameterType="com.xtf.domain.Student">
+        insert into student values (#{name},#{age},#{id})
+    </insert>
+
+    <!-- 查询操作 -->
+    <select id="select" parameterType="com.xtf.domain.Student"
+            resultType="com.xtf.domain.Student">
+        select * from student
+    <where>
+        <if test="name != null and id != null and age != null">
+            name = #{name} and id = #{id} and age =#{age}
+        </if>
+    </where>
+    </select>
+</mapper>
