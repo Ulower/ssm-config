@@ -29,15 +29,17 @@ public class StudentController {
 
 
 
-    @RequestMapping(value = "/tt",produces = "application/json;charset=utf-8")
-    @ResponseBody
+    @RequestMapping(value = "/tt")
     public String hellos(Model model ,HttpServletRequest httpServletRequest,HttpServletResponse response,String username ) throws IOException {
         String id = httpServletRequest.getParameter("id");
         System.out.println(id);
         return "hello";
     }
 
-    @RequestMapping(value = "/login",produces = "application/json;charset=utf-8",method = RequestMethod.GET)
+
+
+    @RequestMapping(value = "/log")
+    @ResponseBody
     public String helloss(Model model ,HttpServletRequest httpServletRequest,HttpServletResponse response,String username ) throws IOException {
 
         Student student = new Student();

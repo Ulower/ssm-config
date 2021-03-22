@@ -2,7 +2,6 @@
 <!DOCTYPE configuration
         PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-config.dtd">
-
 <configuration>
     <!-- 配置信息 -->
 
@@ -11,6 +10,4 @@
         <setting name="logImpl" value="log4j"/>
     </settings>
     <!-- 别名 -->
-
-
 </configuration>
