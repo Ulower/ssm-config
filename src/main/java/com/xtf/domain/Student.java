@@ -9,4 +9,5 @@ public class Student {
     private Integer age;
     private Integer id;
     private Integer number;
+    private Integer emit;
 }
